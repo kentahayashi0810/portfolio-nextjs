@@ -1,12 +1,27 @@
 import styles from "@/styles/Home.module.css";
+import { useState } from "react";
 
 export function Header() {
+  const [navOpen, setNavOpen] = useState(false);
+  const toggleNav = () => {
+    setNavOpen(!navOpen);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.header__wrapper}>
         <div className={styles.header__logo}></div>
-        <div className={styles.header__bg}></div>
-        <nav className={styles.header__globalNav}>
+        <div
+          className={`${styles.header__bg} ${
+            navOpen ? ` ${styles.active}` : ""
+          }`}
+          onClick={toggleNav}
+        ></div>
+        <nav
+          className={`${styles.header__globalNav} ${
+            navOpen ? `${styles.active}` : ""
+          }`}
+        >
           <ul className={styles.header__list}>
             <a href="#frontAbout">
               <li className={styles.header__listItem}>ABOUT</li>
@@ -34,7 +49,12 @@ export function Header() {
         </nav>
       </div>
 
-      <button className={`${styles.header__hamburger} ${styles.spOnly}`}>
+      <button
+        className={`${styles.header__hamburger} ${styles.spOnly} ${
+          navOpen ? ` ${styles.active}` : ""
+        }`}
+        onClick={toggleNav}
+      >
         <span className={styles.header__hamburgerLine}></span>
         <span className={styles.header__hamburgerLine}></span>
         <span className={styles.header__hamburgerLine}></span>
