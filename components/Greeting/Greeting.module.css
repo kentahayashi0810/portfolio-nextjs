@@ -1,0 +1,112 @@
+/* 共通スタイル */
+.inner {
+  width: 100%;
+  max-width: calc(1400px + 6rem);
+  padding-right: 3rem;
+  padding-left: 3rem;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 899px) {
+  .inner {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+.inner.-wide {
+  max-width: calc(1200px + 3.2rem);
+}
+.inner.-tight {
+  max-width: calc(960px + 3.2rem);
+}
+
+@media only screen and (max-width: 899px) {
+  .pcOnly {
+    display: none;
+  }
+}
+.spOnly {
+  display: none;
+}
+@media only screen and (max-width: 899px) {
+  .spOnly {
+    display: inline-block;
+  }
+}
+
+/* Greeting */
+.frontGreeting {
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.frontGreeting .frontGreeting__box {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.frontGreeting .frontGreeting__intro {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #839db3;
+}
+@media only screen and (max-width: 899px) {
+  .frontGreeting .frontGreeting__intro {
+    font-size: 2rem;
+  }
+}
+.frontGreeting .frontGreeting__heading1,
+.frontGreeting .frontGreeting__heading2 {
+  font-size: 8rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+@media only screen and (max-width: 899px) {
+  .frontGreeting .frontGreeting__heading1,
+  .frontGreeting .frontGreeting__heading2 {
+    font-size: 9.5vw;
+  }
+}
+.frontGreeting .frontGreeting__text {
+  font-size: 2rem;
+  margin-top: 6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+@media only screen and (max-width: 899px) {
+  .frontGreeting .frontGreeting__text {
+    font-size: 1.6rem;
+  }
+}
+.frontGreeting .frontGreeting__button {
+  background-color: #dce2ec;
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-align: center;
+  padding: 1.6rem 2rem;
+  border-radius: 10px;
+  border: 2px solid #839db3;
+  color: #234d4f;
+  margin: 12rem 0 6rem;
+  display: block;
+  transition: 0.3s;
+}
+@media only screen and (max-width: 899px) {
+  .frontGreeting .frontGreeting__button {
+    font-size: 2rem;
+    margin: 10rem auto 4rem;
+  }
+}
+.frontGreeting .frontGreeting__button:hover {
+  background-color: #394563;
+
+  color: #dce2ec;
+  border: 2px solid #dce2ec;
+}
