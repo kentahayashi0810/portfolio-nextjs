@@ -1,6 +1,6 @@
-import styles from "@/components/Works/Works.module.css";
+import styles from "@/components/WorksList/WorksList.module.css";
 
-export function Works() {
+export function WorksList() {
   return (
     <>
       <section className={styles.frontWorks} id="frontWorks">

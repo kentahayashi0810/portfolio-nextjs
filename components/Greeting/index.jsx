@@ -1,4 +1,5 @@
 import styles from "@/components/Greeting/Greeting.module.css";
+import Link from "next/link";
 import { Link as Scroll } from "react-scroll";
 
 export function Greeting() {
@@ -18,11 +19,11 @@ export function Greeting() {
               I am a Front End Developer, and an Enthusiastic Learner.
             </p>
 
-            <Scroll to="frontWorks" smooth={true}>
+            <Link href="/works">
               <button className={styles.frontGreeting__button}>
                 Check Out My Works!
               </button>
-            </Scroll>
+            </Link>
           </div>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import styles from "@/components/Header/Header.module.css";
+import Link from "next/link";
 import { useState } from "react";
 import { Link as Scroll } from "react-scroll";
 
@@ -24,23 +25,13 @@ export function Header() {
           }`}
         >
           <ul className={styles.header__list}>
-            <Scroll
-              className={styles.hoverLink}
-              to="frontAbout"
-              smooth={true}
-              duration={2000}
-            >
+            <Link className={styles.hoverLink} href="/about">
               <li className={styles.header__listItem}>ABOUT</li>
-            </Scroll>
+            </Link>
 
-            <Scroll
-              className={styles.hoverLink}
-              to="frontWorks"
-              smooth={true}
-              duration={2000}
-            >
+            <Link className={styles.hoverLink} href="/works">
               <li className={styles.header__listItem}>WORKS</li>
-            </Scroll>
+            </Link>
             <Scroll
               className={styles.hoverLink}
               to="frontContact"
