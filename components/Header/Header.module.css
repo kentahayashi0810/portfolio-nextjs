@@ -185,3 +185,7 @@
   bottom: auto;
   top: 20px;
 }
+
+.hoverLink:hover {
+  cursor: pointer;
+}
